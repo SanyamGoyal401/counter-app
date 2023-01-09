@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>
+            Counter App
+        </h1>
+    </div>
+    
+    <div id="Counter-box">
+        0
+    </div>
+    <div class="flex-container">
+        <div id="inc-btn" class="btn">
+            Increment
+        </div>
+        <div id="dec-btn" class="btn">
+            Decrement
+        </div>
+        <div id="reset-btn" class="btn">
+            Reset
+        </div>
+    </div>
+    <script>
+        var counter = 0;
+        let counterbox = document.querySelector("#Counter-box");
+        let inc_btn = document.getElementById("inc-btn");
+        let dec_btn = document.getElementById("dec-btn");
+        let reset = document.getElementById('reset-btn');
+        inc_btn.addEventListener("click", ()=>{
+            counter++;
+            counterbox.textContent = counter;
+        })
+        dec_btn.addEventListener("click", ()=>{
+            counter--;
+            counterbox.textContent = counter;
+        })
+        reset.addEventListener("click", ()=>{
+            counter = 0;
+            counterbox.textContent = counter;
+        })
+    </script>
+</body>
+</html>
